@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 宿主布局:Godot 画面 + 普通 Android UI 叠加 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Godot 引擎画面容器。id 必须是 godot_fragment_container,
+         GodotActivity 会把 GodotFragment 替换进来 -->
+    <FrameLayout
+        android:id="@+id/godot_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Android 业务 UI:叠加在 Godot 画面之上的按钮 -->
+    <Button
+        android:id="@+id/android_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="24dp"
+        android:text="Android 按钮:推送消息给 Godot"
+        android:textSize="14sp" />
+</FrameLayout>

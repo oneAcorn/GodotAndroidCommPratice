@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    // Godot 官方 Android 库(嵌入引擎本体,MavenCentral 发布)
+    implementation(libs.godot)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
